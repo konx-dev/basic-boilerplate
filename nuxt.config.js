@@ -40,8 +40,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/global',
-    '~/plugins/is-external',
-    { src: '~/plugins/axe.js', mode: 'client' }
+    '~/plugins/is-external'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
