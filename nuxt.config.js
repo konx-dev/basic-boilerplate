@@ -55,7 +55,6 @@ export default {
     '@nuxtjs/google-analytics',
     '@nuxtjs/fontawesome',
     '@nuxtjs/google-fonts',
-    'nuxt-svg-loader'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
