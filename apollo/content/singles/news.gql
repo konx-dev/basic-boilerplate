@@ -4,7 +4,6 @@ query Entry($siteId: [QueryArgument]) {
     ... on newsOverview_newsOverview_Entry {
       id
       title
-      headingPlain
     }
   }
 }
