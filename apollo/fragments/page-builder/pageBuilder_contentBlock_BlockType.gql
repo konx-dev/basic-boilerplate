@@ -1,0 +1,12 @@
+fragment contentBlock on pageBuilder_contentBlock_BlockType {
+    title
+    id
+    typeHandle
+    contentHeading
+    contentBody
+    contentMirror
+    contentImage {
+        title
+        url
+    }
+}

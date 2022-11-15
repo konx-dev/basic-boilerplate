@@ -5,7 +5,7 @@
 </template>
 
 <script>
-// import HomeEntry from '~/apollo/content/singles/home'
+import HomeEntry from '~/apollo/content/singles/home'
 
 export default {
     components: {
@@ -14,25 +14,28 @@ export default {
         return {
             entry: null
         }
+    },
+    mounted() {
+        console.log(this.entry)
+    },
+    apollo: {
+        entry: {
+            prefetch: true,
+            manual: true,
+            query: HomeEntry,
+            variables() {
+                return {
+                    siteId: process.env.SITE_ID
+                }
+            },
+            result({ data }) {
+                // Prevents apollo killing the app
+                if (!data) {
+                    return
+                }
+                this.entry = data.entry
+            }
+        }
     }
-    // apollo: {
-    //     entry: {
-    //         prefetch: true,
-    //         manual: true,
-    //         query: HomeEntry,
-    //         variables() {
-    //             return {
-    //                 siteId: process.env.SITE_ID
-    //             }
-    //         },
-    //         result({ data }) {
-    //             // Prevents apollo killing the app
-    //             if (!data) {
-    //                 return
-    //             }
-    //             this.entry = data.entry
-    //         }
-    //     }
-    // }
 }
 </script>

@@ -1,9 +1,14 @@
+#import "../../fragments/page-builder/pageBuilder_contentBlock_BlockType.gql"
+
 query Entry($siteId: [QueryArgument]) {
   entry(section: "home", siteId: $siteId) {
     id
     ... on home_home_Entry {
       id
       title
+      pageBuilder {
+        ...contentBlock
+      }
     }
   }
 }

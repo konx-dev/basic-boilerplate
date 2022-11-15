@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
-const endpoint = "https://multisite.konx.dev/api";
+const endpoint = "http://localhost/api"; 
 
 fetch(endpoint, {
   method: 'POST',

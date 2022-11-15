@@ -48,7 +48,7 @@ export default {
 
   // Modules for dev and build
   buildModules: [
-    '@nuxtjs/eslint-module',
+    ['@nuxtjs/eslint-module', { fix: true }],
     '@nuxtjs/style-resources',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-analytics',
